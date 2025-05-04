@@ -13,7 +13,7 @@ const initialValues: IValues = {
   message: "",
 };
 
-export const useForm = (validate: { (values: IValues): IValues }) => {
+export const useForm = (validate: (values: IValues) => IValues) => {
   const [formState, setFormState] = useState<{
     values: IValues;
     errors: IValues;
@@ -90,5 +90,11 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     handleSubmit,
     values: formState.values,
     errors: formState.errors,
+    setValues: (newValues: IValues) => {
+      setFormState((prevState) => ({
+        ...prevState,
+        values: newValues,
+      }));
+    },
   };
 };

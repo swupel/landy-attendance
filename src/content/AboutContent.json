@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Effortless Attendance Tracking",
+  "text": "IAMS simplifies attendance tracking by allowing users to scan a QR code and verifying their location is close to the event, ensuring accurate and secure attendance records.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Why QR Codes?",
+      "content": "QR codes provide a quick and seamless way for users to check in, reducing manual effort and errors.",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "Why Location Verification?",
+      "content": "Location verification ensures that attendees are physically present at the event, enhancing the reliability of attendance data.",
       "icon": "notes.svg"
     }
   ]

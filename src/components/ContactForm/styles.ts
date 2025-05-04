@@ -18,6 +18,20 @@ export const FormGroup = styled("form")`
   }
 `;
 
+export const SuccessMessage = styled.div<{ success?: boolean; error?: boolean }>`
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: ${(props) =>
+    props.success ? "green" : props.error ? "red" : "transparent"};
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: ${(props) => (props.success || props.error ? "block" : "none")};
+`;
+
+
+
 export const Span = styled("span")`
   display: block;
   font-weight: 600;

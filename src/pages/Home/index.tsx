@@ -125,6 +125,7 @@ const Home = () => {
       <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
       <MiddleBlock
+        id="middle" // add this id so the header can scroll to it
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}

@@ -25,10 +25,12 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const MenuItem = () => {
     const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
+      const element = document.getElementById(id) as HTMLDivElement | null;
+      if (!element) {
+        console.warn(`scrollTo: element with id "${id}" not found`);
+        return;
+      }
+      element.scrollIntoView({ behavior: "smooth" });
       setVisibility(false);
     };
     return (
@@ -39,7 +41,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Mission")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("middle")}>
           <Span>{t("Product")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall

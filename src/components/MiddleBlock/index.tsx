@@ -8,10 +8,11 @@ interface MiddleBlockProps {
   title: string;
   content: string;
   button: string;
+  id: string;
   t: TFunction;
 }
 
-const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -24,8 +25,9 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
+              <h6 id="middle">{t(title)}</h6>
               <Content>{t(content)}</Content>
+
               {button && (
                 <a href="https://attendence-3mna.onrender.com" target="_blank" rel="noopener noreferrer">
                   <Button name="submit">

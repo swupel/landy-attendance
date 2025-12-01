@@ -57,6 +57,7 @@ const ContentBlock = ({
                         item: {
                           color?: string;
                           title: string;
+                          link?: string;
                         },
                         id: number
                       ) => {
@@ -64,7 +65,7 @@ const ContentBlock = ({
                           <Button
                             key={id}
                             color={item.color}
-                            onClick={() => scrollTo("waitlist")}
+                            onClick={() => item.link ? (window.location.href = item.link) : scrollTo("waitlist")}
                           >
                             {t(item.title)}
                           </Button>

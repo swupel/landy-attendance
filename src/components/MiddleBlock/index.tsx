@@ -29,7 +29,7 @@ const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
               <Content>{t(content)}</Content>
 
               {button && (
-                <a href="https://attendence-3mna.onrender.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://iams.live" target="_blank" rel="noopener noreferrer">
                   <Button name="submit">
                     {t(button)}
                   </Button>

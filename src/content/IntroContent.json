@@ -3,11 +3,12 @@
   "text": "Streamline your attendance process with MarkMePresent. Using QR codes and location verification, ensure accurate and secure attendance records with ease.",
   "button": [
     {
-      "title": "Try Demo",
+      "title": "Launch Web App",
       "link": "https://markmepresent.app"
     },
     {
       "title": "Learn more",
+      "link": "#contact",
       "color": "#fff"
     }
   ]

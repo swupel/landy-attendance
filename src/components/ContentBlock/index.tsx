@@ -27,7 +27,11 @@ const ContentBlock = ({
   direction,
 }: ContentBlockProps) => {
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
+    const element = document.getElementById(id) as HTMLDivElement | null;
+    if (!element) {
+      console.warn(`scrollTo: element with id "${id}" not found`);
+      return;
+    }
     element.scrollIntoView({
       behavior: "smooth",
     });

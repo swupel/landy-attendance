@@ -25,7 +25,7 @@ const MiddleBlock = ({ title, content, button, id, t }: MiddleBlockProps) => {
         <Row justify="center" align="middle">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h6 id="middle">{t(title)}</h6>
+              <h2 id="middle">{t(title)}</h2>
               <Content>{t(content)}</Content>
 
               {button && (

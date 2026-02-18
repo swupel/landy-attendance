@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import { Helmet } from "react-helmet-async";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
@@ -15,6 +16,12 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Home = () => {
   return (
     <Container>
+      <Helmet>
+        <title>MarkMePresent - Innovative Attendance Management System</title>
+        <meta name="description" content="MarkMePresent — attendance management with geographical verification." />
+        <link rel="canonical" href="https://markmepresent.com/" />
+      </Helmet>
+      <h1 style={{position: 'absolute', left: -9999, width: 1, height: 1, overflow: 'hidden'}}>MarkMePresent - Innovative Attendance Management System</h1>
       <ScrollToTop />
       <ContentBlock
         direction="right"

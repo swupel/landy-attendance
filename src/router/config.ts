@@ -9,6 +9,16 @@ const routes = [
       canonical: "https://markmepresent.com/"
     }
   },
+  {
+    path: ["/team"],
+    exact: true,
+    component: "Team",
+    meta: {
+      title: "Our Team - MarkMePresent",
+      description: "Meet the MarkMePresent team.",
+      canonical: "https://markmepresent.com/team"
+    }
+  },
 ];
 
 export default routes;

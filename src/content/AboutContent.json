@@ -12,5 +12,11 @@
       "content": "Location verification ensures that attendees are physically present at the event, enhancing the reliability of attendance data.",
       "icon": "notes.svg"
     }
+  ],
+  "button": [
+    {
+      "title": "Meet the Team",
+      "link": "/team"
+    }
   ]
 }

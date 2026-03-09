@@ -1,4 +1,5 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
@@ -14,6 +15,20 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 300); // Small delay to ensure content is rendered
+      }
+    }
+  }, [hash]);
+
   return (
     <Container>
       <Helmet>
@@ -21,7 +36,7 @@ const Home = () => {
         <meta name="description" content="MarkMePresent — attendance management with geographical verification." />
         <link rel="canonical" href="https://markmepresent.com/" />
       </Helmet>
-      <h1 style={{position: 'absolute', left: -9999, width: 1, height: 1, overflow: 'hidden'}}>MarkMePresent - Innovative Attendance Management System</h1>
+      <h1 style={{ position: 'absolute', left: -9999, width: 1, height: 1, overflow: 'hidden' }}>MarkMePresent - Innovative Attendance Management System</h1>
       <ScrollToTop />
       <ContentBlock
         direction="right"

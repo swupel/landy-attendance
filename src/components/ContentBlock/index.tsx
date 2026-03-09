@@ -78,33 +78,60 @@ const ContentBlock = ({
                     )}
                 </ButtonWrapper>
               ) : (
-                <ServiceWrapper>
-                  <Row justify="space-between">
-                    {typeof section === "object" &&
-                      section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
-                          return (
-                            <Col key={id} span={11}>
-                              <SvgIcon
-                                src={item.icon}
-                                width="60px"
-                                height="60px"
-                              />
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
-                </ServiceWrapper>
+                <>
+                  <ServiceWrapper>
+                    <Row justify="space-between">
+                      {typeof section === "object" &&
+                        section.map(
+                          (
+                            item: {
+                              title: string;
+                              content: string;
+                              icon: string;
+                            },
+                            id: number
+                          ) => {
+                            return (
+                              <Col key={id} span={11}>
+                                <SvgIcon
+                                  src={item.icon}
+                                  width="60px"
+                                  height="60px"
+                                />
+                                <MinTitle>{t(item.title)}</MinTitle>
+                                <MinPara>{t(item.content)}</MinPara>
+                              </Col>
+                            );
+                          }
+                        )}
+                    </Row>
+                  </ServiceWrapper>
+                  {button && (
+                    <ButtonWrapper>
+                      {typeof button === "object" &&
+                        button.map(
+                          (
+                            item: {
+                              color?: string;
+                              title: string;
+                              link?: string;
+                            },
+                            id: number
+                          ) => {
+                            return (
+                              <Button
+                                key={id}
+                                color={item.color}
+                                onClick={() => item.link ? (window.location.href = item.link) : scrollTo("waitlist")}
+                              >
+                                {t(item.title)}
+                              </Button>
+                            );
+                          }
+                        )}
+                    </ButtonWrapper>
+                  )}
+                </>
               )}
             </ContentWrapper>
           </Col>

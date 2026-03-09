@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Anton Graller",
+        "role": "Founder & Developer",
+        "country": "Austria",
+        "flag": "🇦🇹",
+        "description": "Founder and lead developer. Anton focuses on turning vision into reality through clean code and robust systems."
+    },
+    {
+        "name": "Sam Mortens",
+        "role": "Backend Developer",
+        "country": "United States",
+        "flag": "🇺🇸",
+        "description": "Sam built the high-performance Go backend, ensuring the service is fast and scalable."
+    },
+    {
+        "name": "Harsh Manek",
+        "role": "Customer Relations & Biz",
+        "country": "Finland",
+        "flag": "🇫🇮",
+        "description": "Harsh connects with our users and drives the product vision."
+    }
+]

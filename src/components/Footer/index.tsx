@@ -26,10 +26,10 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto: office@swupel.com">
+              <a href="mailto: office@getmarkmepresent.com">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>
-              </Col>
+            </Col>
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
               <Language>{t("Swupel e.U.")}</Language>

@@ -15,6 +15,7 @@ import {
   Label,
   Outline,
   Span,
+  BrandName,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -53,10 +54,10 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => window.open("https://markmepresent.app", "_blank")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Launch App")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -66,9 +67,10 @@ const Header = ({ t }: { t: TFunction }) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" wrap={false}>
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="50px" height="50px" />
+            <BrandName>MarkMePresent</BrandName>
           </LogoContainer>
           <NotHidden>
             <MenuItem />

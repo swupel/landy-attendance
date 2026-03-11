@@ -13,6 +13,21 @@ export const HeaderSection = styled("header")`
 
 export const LogoContainer = styled(Link)`
   display: flex;
+  align-items: center;
+`;
+
+export const BrandName = styled("span")`
+  font-family: "Motiva Sans Bold", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #18216d;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 1100px) {
+    display: none;
+  }
 `;
 
 export const NavLink = styled("div")`
@@ -46,6 +61,10 @@ export const Burger = styled("div")`
 `;
 
 export const NotHidden = styled("div")`
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
   @media only screen and (max-width: 890px) {
     display: none;
   }

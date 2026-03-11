@@ -1,5 +1,6 @@
 {
   "About": "Acerca de",
+  "Launch App": "Iniciar Web App",
   "Policy": "Politica",
   "Mission": "Misión",
   "Product": "Producto",
@@ -19,10 +20,10 @@
   "Learn more": "Más información",
   "Get started": "Comenzar",
   "Submit": "Enviar",
-  "Message" : "Mensaje",
+  "Message": "Mensaje",
   "Your Message": "Tu Mensaje",
-  "Name" : "Nombre",
+  "Name": "Nombre",
   "Your Name": "Tu nombre",
-  "Email" : "Email",
+  "Email": "Email",
   "Your Email": "Tu correo electrónico"
 }

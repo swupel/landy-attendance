@@ -8,7 +8,7 @@ import { ContactContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const handleContactClick = () => {
-    window.location.href = "mailto:office@getmarkmepresent.com";
+    window.location.href = "mailto:contact@markmepresent.net";
   };
 
   return (

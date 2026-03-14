@@ -9,6 +9,7 @@ import {
   Chat,
   Empty,
   Language,
+  NavLink,
 } from "./styles";
 
 const Footer = ({ t }: { t: TFunction }) => {
@@ -18,24 +19,33 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
+            <Col lg={8} md={8} sm={12} xs={24}>
               <Empty />
-
-              <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
-              <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
-              </Para>
-              <a href="mailto: contact@markmepresent.net">
-                <Chat>{t(`Let's Chat`)}</Chat>
+              <Language>{t("CONTACT")}</Language>
+              <a href="mailto:contact@markmepresent.net">
+                <Chat>contact@markmepresent.net</Chat>
+              </a>
+              <Para style={{ fontSize: "12px", marginTop: "10px" }}>{t("A product of")}</Para>
+              <a href="https://swupel.com" target="_blank" rel="noopener noreferrer">
+                <Chat style={{ marginTop: "0" }}>swupel.com</Chat>
               </a>
             </Col>
-            <Col lg={10} md={10} sm={12} xs={12}>
+            <Col lg={8} md={8} sm={12} xs={24}>
               <Empty />
-              <Language>{t("Swupel e.U.")}</Language>
-              <Para>Rupertusplatz</Para>
-              <Para>1170 Vienna</Para>
-              <Para>Austria</Para>
+              <Language>{t("IMPRINT")}</Language>
+              <Para>Swupel e.U.</Para>
+              <Para>Rupertusplatz 1</Para>
+              <Para>1170, Vienna, Austria</Para>
+              <Para>FN: 638278w</Para>
+              <Para>Handelsgericht Wien</Para>
+              <Para>{t("Member of WKO Wien")}</Para>
+            </Col>
+            <Col lg={8} md={8} sm={12} xs={24}>
+              <Empty />
+              <Language>{t("LEGAL")}</Language>
+              <NavLink to="/terms">{t("Terms & Conditions")}</NavLink>
+              <NavLink to="/privacy">{t("Privacy Policy")}</NavLink>
+              <NavLink to="/dispute-resolution">{t("Dispute Resolution")}</NavLink>
             </Col>
           </Row>
         </Container>
